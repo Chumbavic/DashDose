@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashDose - All Pharmacies</title>
+
+    <!-- link to bs file -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- link to js file -->
+    <script src="/js/bootstrap.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .page-header {
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .pharmacy-card {
+            border: 2px solid rgba(0, 0, 0, 0.445);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .pharmacy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+        }
+
+        .open-badge {
+            background-color: green;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .closed-badge {
+            background-color: red;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .hours-badge {
+            background-color: orange;
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .filter-btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .pharmacy-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navbar section starts here -->
+    <section class="container-fluid pt-2 pb-3 align-items-center">
+        <!-- row starts here -->
+         <div class="row">
+            <!-- column starts here -->
+             <div class="col-md-12">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <!-- link containing company name -->
+                     <a href="" class="navbar-brand"><b>DashDose</b></a>
+                    <!-- button to hold the menu items when screen is small in size -->
+                     <button class="navbar-toggler"
+                     data-bs-toggle="collapse"
+                     data-bs-target="#navbarcollapse"
+                     >
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <!-- end of the button -->
+
+                    <!-- menu items -->
+                    <!-- div for the menu items -->
+                    <!-- div starts here -->
+                    <div class="collapse navbar-collapse" id="navbarcollapse">
+                        <div class="navbar-nav nav-justified ms-auto gap-4">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="pharmacies.html" class="nav-link active">Pharmacies</a>
+                            <a href="medicine.html" class="nav-link">Medicine</a>
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="report.html" class="nav-link">Report</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                    <!-- div ends here -->
+                </nav>
+             </div>
+            <!-- column ends here -->
+         </div>
+        <!-- row ends here -->
+    </section>
+    <!--navbar section ends here -->
+
+    <!-- section 2 starts -->
+    <section class="container-fluid bg-primary">
+        <div class="page-header text-center">
+            <h2  class="fw-bold mb-2">All Pharmacies</h2>
+            <p class="mb-0">Find pharmacies near you and check their current status</p>
+        </div>
+    </section>
+    <!-- section 2 ends -->
+
+    <!-- section 3 starts -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 bg-light p-3 mb-4">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <span class="fw-semibold me-3">Filter by:</span>
+                        <button class="btn btn-primary btn-sm filter-btn">All</button>
+                        <button class="btn btn-outline-success btn-sm filter-btn">Open Now</button>
+                        <button class="btn btn-outline-warning btn-sm filter-btn">24 Hours</button>
+                        <button class="btn btn-outline-secondary btn-sm filter-btn">Closed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 ends -->
+
+    <!-- section 4 starts -->
+    <section class="container">
+        <div class="row">
+            <!-- pharmacy 1 - open -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">Goodlife Pharmacy</h5>
+                            <span class="open-badge">Open Now</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">Westlands, Next to Sarit Centre
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">Mon-Sun 8am-9pm</span>
+                            <span>0712 345 678</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Malaria</span>
+                                <span class="badge bg-light text-dark">&#10007; Baby formula</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0712345678" class="btn btn-primary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pharmacy 2 - open 24/7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">Haltons Pharmacy</h5>
+                            <span class="open-badge">Open Now</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">CBD, Moi Avenue
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">24 Hours
+                            </span>
+                            <span>0733 456 789</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Malaria</span>
+                                <span class="badge bg-light text-dark">&#10003; Antibiotics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0733456789" class="btn btn-primary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pharmacy 3 - open -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">MedPlus Pharmacy</h5>
+                            <span class="open-badge">Open Now</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">South B, Opposite Shell
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">Mon-Sat 8am-8pm</span>
+                            <span>0745 678 901</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Malaria</span>
+                                <span class="badge bg-light text-dark">&#10003; Baby formula</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0745678901" class="btn btn-primary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pharmacy 4 - closed -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">Tablets Pharmacy</h5>
+                            <span class="closed-badge">Closed</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">Eastlands, Next to Tuskys
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">Mon-Sat 8am-7pm</span>
+                            <span>0700 111 222</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Flu meds</span>
+                                <span class="badge bg-light text-dark">&#10003; First aid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0700111222" class="btn btn-outline-secondary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pharmacy 5 - open -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">Wellness Pharmacy</h5>
+                            <span class="open-badge">Open Now</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">Kilimani, Next to Yaya Centre
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">Mon-Sun 9am-8pm</span>
+                            <span>0722 333 444</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Malaria</span>
+                                <span class="badge bg-light text-dark">&#10003; Antibiotics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0722333444" class="btn btn-primary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pharmacy 6 - closed -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pharmacy-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="card-title fw-bold mb-0">Care Pharmacy</h5>
+                            <span class="closed-badge">Closed</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-secondary mb-2">Karen, Next to Karen Hospital
+                        </p>
+                        <div class="pharmacy-status mb-3">
+                            <span class="hours-badge">Mon-Fri 8am-6pm</span>
+                            <span>0711 222 333</span>
+                        </div>
+                        <div class="mb-3">
+                            <small class="text-secondary d-block mb-2">Common medicines:</small>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">&#10003; Painkillers</span>
+                                <span class="badge bg-light text-dark">&#10003; Malaria</span>
+                                <span class="badge bg-light text-dark">&#10003; First aid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1">View Details</a>
+                            <a href="tel:0711222333" class="btn btn-outline-secondary btn-sm">
+                                Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 ends -->
+
+    <!-- info section starts -->
+    <section class="container-fluid p-5" style="background-color: #343a40;">
+        <!-- row starts -->
+        <div class="row gx-2">
+            <!-- columns start here -->
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">DashDose</h3>
+                <p class="text-secondary">Helping you find open pharmacies and available medicine where and when you need it most.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Quick Links</h3>
+                <p>
+                    <a href="index.html" class="text-decoration-none text-secondary">Home</a>
+                </p>
+                <p>
+                    <a href="pharmacies.html" class="text-decoration-none text-secondary">Pharmacies</a>
+                </p>
+                <p>
+                    <a href="report.html" class="text-decoration-none text-secondary">Report</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Info</h3>
+                <p>
+                    <a href="about.html" class="text-decoration-none text-secondary">About Us</a>
+                </p>
+                <p>
+                    <a href="contact.html" class="text-decoration-none text-secondary">Contact</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Emergency</h3>
+                <p class="text-white">999</p>
+                <p class="text-white">111</p>
+
+                <!-- links -->
+                 <p>
+                    <a href="https://www.Instagram.com" class="text-decoration-none text-secondary">Instagram</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Facebook.com" class="text-decoration-none text-secondary">Facebook</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Twitter.com" class="text-decoration-none text-secondary">Twitter/X</a>
+                 </p>
+            </div>
+            <!-- columns ends here -->
+        </div>
+        <!-- row ends -->
+    </section>
+    <!-- info section ends -->
+
+    <!-- footer section starts -->
+    <footer class="text-secondary text-center p-3" style="background-color: #343a40;">
+      <h5>Developed by Victor &copy; 2026.All rights reserved</h5>
+    </footer>
+    <!-- end of footer section -->
+
+</body>
+</html>

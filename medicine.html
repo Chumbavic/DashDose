@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashDose - Check Medicine Stock</title>
+
+    <!-- link to bs file -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- link to js file -->
+    <script src="/js/bootstrap.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .page-header {
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .search-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .pharmacy-row {
+            border: 2px solid rgba(0, 0, 0, 0.445);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pharmacy-row:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .open-badge {
+            background-color: #198754;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .in-stock {
+            color: #198754;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .out-of-stock {
+            color: #dc3545;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .emergency-card {
+            background-color: #dc3545;
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+        .emergency-phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navbar section starts here -->
+    <section class="container-fluid pt-2 pb-3 align-items-center">
+        <!-- row starts here -->
+         <div class="row">
+            <!-- column starts here -->
+             <div class="col-md-12">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <!-- link containing company name -->
+                     <a href="" class="navbar-brand"><b>DashDose</b></a>
+                    <!-- button to hold the menu items when screen is small in size -->
+                     <button class="navbar-toggler"
+                     data-bs-toggle="collapse"
+                     data-bs-target="#navbarcollapse"
+                     >
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <!-- end of the button -->
+
+                    <!-- menu items -->
+                    <!-- div for the menu items -->
+                    <!-- div starts here -->
+                    <div class="collapse navbar-collapse" id="navbarcollapse">
+                        <div class="navbar-nav nav-justified ms-auto gap-4">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="pharmacies.html" class="nav-link">Pharmacies</a>
+                            <a href="medicine.html" class="nav-link active">Medicine</a>
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="report.html" class="nav-link">Report</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                    <!-- div ends here -->
+                </nav>
+             </div>
+            <!-- column ends here -->
+         </div>
+        <!-- row ends here -->
+    </section>
+    <!--navbar section ends here -->
+
+
+    <!-- section 2 starts -->
+    <section class="container-fluid bg-primary">
+        <div class="page-header text-center">
+            <h2 class="fw-bold mb-2">Check Medicine Stock</h2>
+            <p class="mb-0">See which pharmacies have your medicine right now</p>
+        </div>
+    </section>
+    <!-- section 2 ends -->
+
+
+    <!-- section 3 starts -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="emergency-card text-center flex-grow-1">
+                    <b>Emergency?</b> Call Ambulance:
+                    <span class="emergency-phone">999</span> or
+                    <span class="emergency-phone">112</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 ends -->
+
+
+    <!-- section 4 starts -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- search card starts -->
+                <div class="search-card">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label class="form-label fw-semibold">Select Medicine</label>
+                            <!-- form starts -->
+                            <select class="form-select form-select-lg">
+                                <option>Choose medicine to check stock</option>
+                                <option>Painkillers</option>
+                                <option>Malaria Drugs</option>
+                                <option>Antibiotics</option>
+                                <option>Flu medicine</option>
+                                <option>Baby formula</option>
+                                <option>First aid supplies</option>
+                                <option>Blood pressure medication</option>
+                                <option>Diabetes medication</option>
+                            </select>
+                            <!-- form ends -->
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Your Area</label>
+                            <!-- form starts -->
+                            <select class="form-select form-select-lg">
+                                <option>Location</option>
+                                <option>CBD</option>
+                                <option>Westlands</option>
+                                <option>Eastlands</option>
+                                <option>South B</option>
+                                <option>Kilimani</option>
+                                <option>Karen</option>
+                            </select>
+                            <!-- form ends -->
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary btn-lg w-100">Check Availability
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- search card ends -->
+            </div>
+        </div>
+    </section>
+    <!-- section 4 ends -->
+
+
+    <!-- section 5 starts -->
+    <section class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-bold">Results for: Painkillers</h4>
+            <p class="text-secondary">Near: Westlands</p>
+        </div>
+        <!-- rows start -->
+        <div class="pharmacy-row">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <h5 class="fw-bold mb-1">Goodlife Pharmacy</h5>
+                        <span class="open-badge">Open Now</span>
+                    </div>
+                    <p class="text-secondary small mb-1"> Westlands, Next to Sarit Centre - 0.5 km away
+                    </p>
+                    <p class="small mb-0"> 0712 345 678 - Closes 9pm</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="in-stock">In Stock</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2">Details</a>
+                    <button href="" class="btn btn-primary btn-sm">Call
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pharmacy-row">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <h5 class="fw-bold mb-1">Haltons Pharmacy</h5>
+                        <span class="open-badge">Open Now</span>
+                    </div>
+                    <p class="text-secondary small mb-1">CBD, Moi Avenue - 1.2 km away
+                    </p>
+                    <p class="small mb-0">0733 456 789 - 24 Hours
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="in-stock">In Stock</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2">Details</a>
+                    <button href="" class="btn btn-primary btn-sm">Call
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pharmacy-row">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <h5 class="fw-bold mb-1">MedPlus Pharmacy</h5>
+                        <span class="open-badge">Open Now</span>
+                    </div>
+                    <p class="text-secondary small mb-1">South B, Opposite Shell - 2.0 km away
+                    </p>
+                    <p class="small mb-0">0745 678 901 - Closes 8pm
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="in-stock">In Stock</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2">Details</a>
+                    <button href="" class="btn btn-primary btn-sm">Call
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pharmacy-row">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <h5 class="fw-bold mb-1">Tablets Pharmacy</h5>
+                        <span class="open-badge" style="background-color: #6c757d;">Closed</span>
+                    </div>
+                    <p class="text-secondary small mb-1">Eastlands, Next to Tuskys - 2.5 km away
+                    </p>
+                    <p class="small mb-0">0700 111 222 - Opens 8am
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="out-of-stock">Out of Stock</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <a href="#" class="btn btn-outline-secondary btn-sm me-2">Details</a>
+                    <button href="" class="btn btn-primary btn-sm">Call
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- rows end -->
+
+        <!-- important note -->
+        <div class="alert alert-info mt-4">
+            <b>Important:</b> Always call the pharmacy before going to confirm the medicine is still available and ask for the current price.
+        </div>
+    </section>
+    <!-- section 5 ends -->
+
+
+    <!-- info section starts -->
+    <section class="container-fluid p-5" style="background-color: #343a40;">
+        <!-- row starts -->
+        <div class="row gx-2">
+            <!-- columns start here -->
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">DashDose</h3>
+                <p class="text-secondary">Helping you find open pharmacies and available medicine when you need it most.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Quick Links</h3>
+                <p>
+                    <a href="index.html" class="text-decoration-none text-secondary">Home</a>
+                </p>
+                <p>
+                    <a href="pharmacies.html" class="text-decoration-none text-secondary">Pharmacies</a>
+                </p>
+                <p>
+                    <a href="report.html" class="text-decoration-none text-secondary">Report</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Info</h3>
+                <p>
+                    <a href="about.html" class="text-decoration-none text-secondary">About Us</a>
+                </p>
+                <p>
+                    <a href="contact.html" class="text-decoration-none text-secondary">Contact</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Emergency</h3>
+                <p class="text-white">999</p>
+                <p class="text-white">111</p>
+
+                <!-- links -->
+                 <p>
+                    <a href="https://www.Instagram.com" class="text-decoration-none text-secondary">Instagram</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Facebook.com" class="text-decoration-none text-secondary">Facebook</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Twitter.com" class="text-decoration-none text-secondary">Twitter/X</a>
+                 </p>
+            </div>
+            <!-- columns ends here -->
+        </div>
+        <!-- row ends -->
+    </section>
+    <!-- info section ends -->
+
+    <!-- footer section starts -->
+    <footer class="text-secondary text-center p-3" style="background-color: #343a40;">
+      <h5>Developed by Victor &copy; 2026.All rights reserved</h5>
+    </footer>
+   <!-- end of footer section -->
+
+</body>
+</html>

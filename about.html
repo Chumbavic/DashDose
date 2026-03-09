@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashDose - About Us</title>
+
+    <!-- link to bs file -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- link to js file -->
+    <script src="/js/bootstrap.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .page-header {
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .about-card {
+            border: 2px solid rgba(0, 0, 0, 0.445);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            background: white;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: none;
+            border-radius: 12px;
+            background-color: #0b5ed7;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .team-card {
+            border: 2px solid rgba(0, 0, 0, 0.445);
+            height: 150px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .emergency-card {
+            background-color: #dc3545;
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+        .emergency-phone {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar section starts here -->
+    <section class="container-fluid pt-2 pb-3 align-items-center">
+        <!-- row starts here -->
+         <div class="row">
+            <!-- column starts here -->
+             <div class="col-md-12">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <!-- link containing company name -->
+                     <a href="" class="navbar-brand"><b>DashDose</b></a>
+                    <!-- button to hold the menu items when screen is small in size -->
+                     <button class="navbar-toggler"
+                     data-bs-toggle="collapse"
+                     data-bs-target="#navbarcollapse"
+                     >
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <!-- end of the button -->
+
+                    <!-- menu items -->
+                    <!-- div for the menu items -->
+                    <!-- div starts here -->
+                    <div class="collapse navbar-collapse" id="navbarcollapse">
+                        <div class="navbar-nav nav-justified ms-auto gap-4">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="pharmacies.html" class="nav-link">Pharmacies</a>
+                            <a href="medicine.html" class="nav-link">Medicine</a>
+                            <a href="about.html" class="nav-link active">About</a>
+                            <a href="report.html" class="nav-link">Report</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                    <!-- div ends here -->
+                </nav>
+             </div>
+            <!-- column ends here -->
+         </div>
+        <!-- row ends here -->
+    </section>
+    <!--navbar section ends here -->
+
+    <!-- section 2 starts -->
+    <section class="container-fluid bg-primary">
+        <div class="page-header text-center">
+            <h2 class="fw-bold mb-2">About <b>DashDose</b></h2>
+            <p class="mb-0">Our mission is to help you find medicine when you need it most</p>
+        </div>
+    </section>
+    <!-- section 2 ends -->
+
+    <!-- section 3 starts -->
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="emergency-card d-flex text-center">
+                    <div class="flex-grow-1">
+                        <b>Emergency?</b> Call Ambulance:
+                        <span class="emergency-phone">999</span> or
+                        <span class="emergency-phone">112</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 ends -->
+
+    <!-- section 4 starts -->
+    <section class="container mt-4">
+        <div class="about-card">
+            <h5 class="fw-bold mb-4">Our Story</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-secondary">DashDose was started in 2024 after our founder spent 2 hours walking around Eastlands at night looking for an open pharmacy for his sick daughter. That night, we realized there was no simple way to know which pharmacies were open and which had the medicine you need.</p>
+                    <p class="text-secondary">We built DashDose to solve this problem. Today, we help hundreds of Kenyans find open pharmacies and available medicine every day.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 text-center" style="background-color:#c3c5c8; border-radius: 8px;">                       
+                            <p>100+ pharmacies listed</p>
+                            <p>Updated daily</p>
+                            <p>Free for everyone</p>
+                            <p>Verified by users like you</p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 ends -->
+
+    <!-- section 5 starts -->
+    <section class="container mt-4">
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <p class="number">150+</p>
+                    <p class="mb-0">Pharmacies</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <p class="number">24</p>
+                    <p class="mb-0">24hr Pharmacies</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <p class="number">12</p>
+                    <p class="mb-0">Areas Covered</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <p class="number">5K+</p>
+                    <p class="mb-0">Monthly Users</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 5 ends -->
+
+    <!-- section 6 starts -->
+    <section class="container mt-4">
+        <h5 class="fw-bold mb-4 text-center text-primary">Our Core Values</h5>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="team-card">
+                    <h6 class="fw-bold mt-3">Putting People First</h6>
+                    <p class="small text-secondary">We believe access to medicine should be easy and stress-free</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <h6 class="fw-bold mt-3">Accuracy</h6>
+                    <p class="small text-secondary">We work hard to keep our information correct and up-to-date</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <h6 class="fw-bold mt-3">Community</h6>
+                    <p class="small text-secondary">We rely on users like you to report wrong information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 6 ends -->
+
+    <!-- section 7 starts -->
+    <section class="container mt-4">
+        <h5 class="fw-bold mb-4 text-center text-primary">Our Team</h5>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="team-card">
+                    <h6 class="fw-bold mb-1 mt-2">James Mwangi</h6>
+                    <p class="small text-secondary mb-2">Founder</p>
+                    <p class="small">The one who spent 2 hours looking for medicine</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <h6 class="fw-bold mb-1 mt-2">Sarah Achieng</h6>
+                    <p class="small text-secondary mb-2">Operations</p>
+                    <p class="small">Keeps our pharmacy data updated</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <h6 class="fw-bold mb-1 mt-2">David Otieno</h6>
+                    <p class="small text-secondary mb-2">Community Support</p>
+                    <p class="small">Helps users and pharmacy owners</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <h6 class="fw-bold mb-1 mt-2">Mzee Ojwang</h6>
+                    <p class="small text-secondary mb-2">Community Support</p>
+                    <p class="small">Helps users and pharmacy owners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 7 ends -->
+
+    <!-- section 8 starts -->
+    <section class="container mt-5">
+        <div class="about-card">
+            <h6 class="fw-bold mb-3">Important Disclaimer</h6>
+            <p class="small text-secondary mb-0">DashDose provides information gathered from pharmacies and users. We do not guarantee that all information is 100% accurate at all times. Pharmacy hours, stock, and prices change frequently. <b>Always call the pharmacy before going to confirm.</b></p>
+        </div>
+    </section>
+    <!-- section 8 ends -->
+
+    <!-- info section starts -->
+    <section class="container-fluid p-5" style="background-color: #343a40;">
+        <!-- row starts -->
+        <div class="row gx-2">
+            <!-- columns start here -->
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">DashDose</h3>
+                <p class="text-secondary">Helping you find open pharmacies and available medicine when you need it most.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Quick Links</h3>
+                <p>
+                    <a href="index.html" class="text-decoration-none text-secondary">Home</a>
+                </p>
+                <p>
+                    <a href="pharmacies.html" class="text-decoration-none text-secondary">Pharmacies</a>
+                </p>
+                <p>
+                    <a href="report.html" class="text-decoration-none text-secondary">Report</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Info</h3>
+                <p>
+                    <a href="about.html" class="text-decoration-none text-secondary">About Us</a>
+                </p>
+                <p>
+                    <a href="contact.html" class="text-decoration-none text-secondary">Contact</a>
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3 class="text-white fw-bold">Emergency</h3>
+                <p class="text-white">999</p>
+                <p class="text-white">111</p>
+
+                <!-- links -->
+                 <p>
+                    <a href="https://www.Instagram.com" class="text-decoration-none text-secondary">Instagram</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Facebook.com" class="text-decoration-none text-secondary">Facebook</a>
+                 </p>
+                 <p>
+                    <a href="https://www.Twitter.com" class="text-decoration-none text-secondary">Twitter/X</a>
+                 </p>
+            </div>
+            <!-- columns ends here -->
+        </div>
+        <!-- row ends -->
+    </section>
+    <!-- info section ends -->
+
+    <!-- footer section starts -->
+    <footer class="text-secondary text-center p-3" style="background-color: #343a40;">
+      <h5>Developed by Victor &copy; 2026.All rights reserved</h5>
+    </footer>
+   <!-- end of footer section -->
+
+</body>
+</html>
